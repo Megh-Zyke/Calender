@@ -18,7 +18,7 @@ body{
 
 .wrapper{
     background-color: #fff;
-    width: 450x;
+    width: 400x;
     border-radius: 10px;
 }
 
@@ -56,7 +56,7 @@ header .icons i:last-child{
 }
 
 .calender{
-    padding: 20px;
+    padding-right: 30px;
 }
 .calender ul{
     display:flex;
@@ -68,6 +68,7 @@ header .icons i:last-child{
 .calender ul li{
     width: calc(100% / 7);
     position: relative;
+  
     
     
 }
