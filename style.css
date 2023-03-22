@@ -57,6 +57,7 @@ header .icons i:last-child{
 
 .calender{
     padding-right: 30px;
+    padding-bottom:10px;
 }
 .calender ul{
     display:flex;
