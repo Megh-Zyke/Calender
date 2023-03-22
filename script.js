@@ -6,8 +6,12 @@ let date = new Date();
 var currYear = date.getFullYear();
 var currMonth = date.getMonth();
 
+
 const months = ["January" , "February" , "March","April","May","June","July",
             "August","September","October","November","December"];
+
+
+
 const renderCalender=()=>{
     let firstDayofMonth = new Date(currYear,currMonth,1).getDay(),
      lastDateofMonth = new Date(currYear,currMonth+1,0).getDate(),
@@ -30,6 +34,8 @@ const renderCalender=()=>{
         liTag += `<li class="inactive">${i-lastDayofMonth +1}</li>`;
     }
 
+    
+    document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?seasons , "+ months[currMonth] + "')";
    
 
     currentDate.innerText = months[currMonth] +" "+currYear;
@@ -42,6 +48,19 @@ prevNextIcon.forEach(icon => { // getting prev and next icons
         // if clicked icon is previous icon then decrement current month by 1 else increment it by 1
         currMonth = icon.id === "prev" ? (currMonth - 1) : (currMonth + 1);
 
+        if(currMonth <=0 || currMonth>11){
+            date = new Date(currYear, currMonth);
+            currYear=date.getFullYear();
+            currMonth = date.getMonth();
+        }
+        else{
+            date = new Date();
+
+        }
+        
+        renderCalender();
+    })
+})
         if(currMonth <=0 || currMonth>11){
             date = new Date(currYear, currMonth);
             currYear=date.getFullYear();
