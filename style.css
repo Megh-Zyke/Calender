@@ -13,6 +13,7 @@ body{
     justify-content: center;
     min-height: 100vh;
     background: #11F1F6;
+    background-image: url('https://source.unsplash.com/1600x900/?nature,water');
 }
 
 .wrapper{
