@@ -115,3 +115,11 @@ header .icons i:last-child{
 .days li.active::before{
     background: #195bb7;
 }
+
+
+@media only screen and (max-width : 700px){
+
+    .wrapper{
+      transform: scale(0.67);
+    }
+  }
